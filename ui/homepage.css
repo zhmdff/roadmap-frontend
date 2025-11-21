@@ -1,0 +1,92 @@
+.cards-wrapper {
+  max-width: 1100px;
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Şəkil hissə (ən yuxarıda) */
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  transform: translateY(0px); /* Shifts the image upward, making the top part more visible */
+}
+
+/* Məlumat hissəsi (şəkildən sonra) */
+.card-body {
+  padding: 16px 18px 8px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Aşağı hissə — button */
+.card-footer {
+  padding: 12px 18px 18px;
+  margin-top: auto; /* button həmişə aşağıda qalsın */
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+   background: #2563eb;
+  color: white;
+  text-align: center;
+  text-decoration: none; /* Removes the underline */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.card-button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* 📱 Telefon responsivi */
+@media (max-width: 768px) {
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
